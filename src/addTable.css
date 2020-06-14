@@ -1,0 +1,15 @@
+table {
+    border-collapse: collapse;
+   margin: 50px auto;
+}
+th, td {
+   width: 300px; 
+   cursor: pointer;
+}
+td {
+    text-align: center;
+    padding: 10px;
+}
+.delete-btn {
+  width: 40px;
+}

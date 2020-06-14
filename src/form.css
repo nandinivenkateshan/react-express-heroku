@@ -1,0 +1,15 @@
+.heading {
+    text-align: center;
+}
+.form {
+    display: flex;
+    justify-content: center;
+}
+.name, .age, .salary {
+    padding:5px;
+    margin-right: 15px;
+}
+.submit-btn {
+    height: 25px;
+    margin: 16px 0px 0px 10px;
+}
