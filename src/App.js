@@ -93,12 +93,12 @@ function App () {
         return item
       })
       setDetails(editedDetails)
-      if (value) editDetail('https://parle-g.herokuapp.com                                                                                                                                                                                                                                                                                                                                                                                                                      /editDetail', { id, data, value: value })
+      if (value) editDetail('https://parle-g.herokuapp.com/editDetail', { id, data, value: value })
     }
   }
 
   return (
-    <main>
+    <main>	
 
       <Form
         obj={obj}
