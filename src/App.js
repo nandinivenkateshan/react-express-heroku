@@ -39,6 +39,7 @@ function App () {
         'Content-Type': 'application/json'
       }
     })
+    console.log('esponse from insertData bankend API', response)
   }
 
   const deleteDetails = async (url, id) => {
@@ -49,6 +50,7 @@ function App () {
         'Content-Type': 'application/json'
       }
     })
+    console.log('response from deleteDetails backend', response)
   }
 
   const editDetail = async (url, data) => {
@@ -60,7 +62,7 @@ function App () {
         'Content-Type': 'application/json'
       }
     })
-    console.log('response', response)
+    console.log('response from editDetails', response)
   }
 
   const handleSubmit = e => {
