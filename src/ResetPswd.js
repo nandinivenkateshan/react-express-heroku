@@ -58,7 +58,7 @@ function ResetPswd () {
 
   const handleSubmit = e => {
     e.preventDefault()
-    resetPswd('http://localhost:5000/resetPswd', values)
+    resetPswd('http://localhost:3000/resetPswd', values)
     setValues({
       email: '',
       pswd: '',

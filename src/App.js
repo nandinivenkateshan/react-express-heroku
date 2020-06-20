@@ -20,7 +20,7 @@ function App () {
   }, [])
 
   const fetchDetails = async () => {
-    const response = await window.fetch(`http://localhost:5000/getData/?sid=${sid}`)
+    const response = await window.fetch(`http://localhost:3000/getData/?sid=${sid}`)
     const result = await response.json()
     console.log('resuklt', result)
     setDetails(result)
@@ -73,13 +73,13 @@ function App () {
       sid: sid
     }
     setDetails([...details, object])
-    addDetails('http://localhost:5000/insertData', object)
+    addDetails('http://localhost:3000/insertData', object)
     setObj({ name: '', age: '', salary: '' })
   }
 
   const handleDelete = id => {
     setDetails(details.filter(item => item.id !== id))
-    deleteDetails('http://localhost:5000/deleteRow', id)
+    deleteDetails('http://localhost:3000/deleteRow', id)
   }
 
   const handleEdit = (id, data) => {
@@ -93,7 +93,7 @@ function App () {
         return item
       })
       setDetails(editedDetails)
-      if (value) editDetail('http://localhost:5000/editDetail', { id, data, value: value })
+      if (value) editDetail('http://localhost:3000/editDetail', { id, data, value: value })
     }
   }
 

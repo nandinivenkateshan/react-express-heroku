@@ -87,7 +87,7 @@ function SignUp () {
       email: values.email,
       password: values.pswd
     }
-    createAcc('http://localhost:5000/createAcc', obj)
+    createAcc('http://localhost:3000/createAcc', obj)
     setValues({
       name: '',
       email: '',

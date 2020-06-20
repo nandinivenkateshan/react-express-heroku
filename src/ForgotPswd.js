@@ -51,7 +51,7 @@ function ForgotPswd () {
 
   const handleSubmit = e => {
     e.preventDefault()
-    resetPswd('http://localhost:5000/forgotPswd', { email })
+    resetPswd('http://localhost:3000/forgotPswd', { email })
   }
 
   const resetPswd = async (url, email) => {
