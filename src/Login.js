@@ -72,7 +72,7 @@ function Login () {
       email: values.email,
       pswd: values.pswd
     }
-    login('http://localhost:3000/login', obj)
+    login('https://parle-g.herokuapp.com/login', obj)
     setValues({
       email: '',
       pswd: ''

@@ -20,7 +20,7 @@ function App () {
   }, [])
 
   const fetchDetails = async () => {
-    const response = await window.fetch(`http://localhost:3000/getData/?sid=${sid}`)
+    const response = await window.fetch(`https://parle-g.herokuapp.com/getData/?sid=${sid}`)
     const result = await response.json()
     console.log('resuklt', result)
     setDetails(result)
@@ -73,13 +73,13 @@ function App () {
       sid: sid
     }
     setDetails([...details, object])
-    addDetails('http://localhost:3000/insertData', object)
+    addDetails('https://parle-g.herokuapp.com/insertData', object)
     setObj({ name: '', age: '', salary: '' })
   }
 
   const handleDelete = id => {
     setDetails(details.filter(item => item.id !== id))
-    deleteDetails('http://localhost:3000/deleteRow', id)
+    deleteDetails('https://parle-g.herokuapp.com/deleteRow', id)
   }
 
   const handleEdit = (id, data) => {
@@ -93,7 +93,7 @@ function App () {
         return item
       })
       setDetails(editedDetails)
-      if (value) editDetail('http://localhost:3000/editDetail', { id, data, value: value })
+      if (value) editDetail('https://parle-g.herokuapp.com                                                                                                                                                                                                                                                                                                                                                                                                                      /editDetail', { id, data, value: value })
     }
   }
 
