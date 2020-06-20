@@ -3,9 +3,10 @@ const db = require('./query')
 const app = express()
 const path = require('path')
 const cors = require('cors')
-const port = 5000
 app.use(express.json())
 app.use(cors())
+
+const port = process.env.PORT || 8080
 
 app.use(express.static(path.join(__dirname, '../build')))
 
