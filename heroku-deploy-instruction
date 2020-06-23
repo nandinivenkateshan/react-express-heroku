@@ -6,6 +6,9 @@ Installation and create app in heroku
 4 ) Then move to your project folder "cd ~/react-express-heroku"
 5 ) Create your first Heroku app by this command "heroku create"
 
+1 ) Simply create a Procfile (without any file extension) and add "web: node index.js".
+Heroku first looks for this Procfile. If none is found, Heroku will attempt to start a default web process via the start script in your package.json.
+
 connect your React app to a backend on the same origin 
 1) Refer this doc -> https://flaviocopes.com/how-to-serve-react-from-same-origin/
 
@@ -16,8 +19,24 @@ Deploy the code
 1 ) git add . 
 2) git commit -m "Commit changes" 
 3 ) git push heroku master
+Now visit your app in your browser
+4 ) heroku open
+You can also view information about your running app using one of the logging commands. This is very useful in debugging errors.
+5 ) heroku logs --tail
+
 
 Heroku and Postgres
 need to access the psql PostgreSQL command-line interface in order to create tables and record data for your app’s data
 1 )Install the PostgreSQL add-on for the Heroku app "heroku addons:create heroku-postgresql:hobby-dev"
-2 )
+   you can use heroku addons to see if your application already has a database provisioned by using this command "heroku addons"
+2 )Get the Heroku PostgreSQL database credentials from the heroku account . Can check in the "view credentials" in the "settings" of your respective app.
+3) Once Heroku Postgres has been added , will be available in the app configuration and will contain the URL used to access the newly provisioned Heroku Postgres service.Can be confiremed by this command "heroku config".
+4 )To see all PostgreSQL databases provisioned by your application and the identifying characteristics of each (db size, status, number of tables, PG version, creation date etc…) use the "heroku pg:info" command.
+5 ) psql is the native PostgreSQL interactive terminal and is used to execute queries and issue commands to the connected database.
+To establish a psql session with your remote database use heroku pg:psql. You must have PostgreSQL installed on your system to use "heroku pg:psql"
+6 ) Now Create the table by running the query .Example: 
+    CREATE TABLE label
+        (
+            id int PRIMARY KEY NOT NULL,
+            name varchar(45)
+        ) 
