@@ -1,0 +1,23 @@
+
+Installation and create app in heroku
+1 ) Install Heroku using this command "npm install -g heroku"
+2 ) To verify your CLI installation, use the "heroku --version" command
+3 ) Create account in heroku .After you install the CLI, run the "heroku login" command. You’ll be prompted to enter any key to go to your web browser to complete login.
+4 ) Then move to your project folder "cd ~/react-express-heroku"
+5 ) Create your first Heroku app by this command "heroku create"
+
+connect your React app to a backend on the same origin 
+1) Refer this doc -> https://flaviocopes.com/how-to-serve-react-from-same-origin/
+
+Setup a free PostgreSQL database on Heroku 
+1) Refer this doc -> https://dev.to/prisma/how-to-setup-a-free-postgresql-database-on-heroku-1dc1
+
+Deploy the code 
+1 ) git add . 
+2) git commit -m "Commit changes" 
+3 ) git push heroku master
+
+Heroku and Postgres
+need to access the psql PostgreSQL command-line interface in order to create tables and record data for your app’s data
+1 )Install the PostgreSQL add-on for the Heroku app "heroku addons:create heroku-postgresql:hobby-dev"
+2 )
