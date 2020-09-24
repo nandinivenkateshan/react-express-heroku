@@ -16,6 +16,10 @@ Setup a free PostgreSQL database on Heroku
 1) Refer this doc -> https://dev.to/prisma/how-to-setup-a-free-postgresql-database-on-heroku-1dc1
 
 Deploy the code 
+1) cd my-project
+2) git init
+3) heroku git:remote -a app-name (Refer Deploy procedure in the heroku account)
+
 1 ) git add . 
 2) git commit -m "Commit changes" 
 3 ) git push heroku master
