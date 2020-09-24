@@ -44,3 +44,6 @@ To establish a psql session with your remote database use heroku pg:psql. You mu
             id int PRIMARY KEY NOT NULL,
             name varchar(45)
         ) 
+
+Replace the url with the heroku app url in the proxy(package.json) 
+
